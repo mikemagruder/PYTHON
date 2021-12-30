@@ -1,3 +1,5 @@
+import random
+
 num1 = 2.2949492
 num2 = 3.7
 
@@ -19,3 +21,5 @@ print(f'My number is {foobar:.2f} - look at the nice rounding!')
 
 a = 6.789809823
 print('%.4f' %a)
+
+print(random.randint(2,5)) # provides a random number between 2 and 5
