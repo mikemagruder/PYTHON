@@ -11,6 +11,7 @@ def countdown(x):
         x -= 1
     return rev_list
 
+print("Exercise #1:")
 print(countdown(5))
 
 
@@ -23,6 +24,7 @@ def print_and_return(list):
     print(list[0])
     return list[1]
 
+print("Exercise #2:")
 print_and_return([1,2])
 
 
@@ -36,6 +38,7 @@ def first_plus_length(x):
     length = len(x)
     print(length + first_value)
 
+print("Exercise #3:")
 first_plus_length([1,2,3,4,5])
 
 
@@ -61,6 +64,7 @@ def values_greater_than_second(list):
     print(count)
     return new_list
 
+print("Exercise #4:")
 print(values_greater_than_second([5,2,3,2,1,4]))
 
 
@@ -78,6 +82,6 @@ def length_and_value(size, value):
         size -= 1
     print(new_list)
 
-
+print("Exercise #5:")
 length_and_value(4,7)
 length_and_value(6,2)
