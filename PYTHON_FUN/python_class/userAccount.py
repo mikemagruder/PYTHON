@@ -49,14 +49,15 @@ class User:
         return self
 
 mike = User("Mike")
-
 mike.account['checking'].deposit(100).deposit(500).deposit(1500).withdraw(500).yeild_interest()
 mike.account['savings'].deposit(100).deposit(500).deposit(1500).withdraw(500).yeild_interest()
 mike.display_user_balance()
+
 
 kendra = User("Kendra")
 kendra.account['checking'].deposit(100).deposit(800).deposit(1900).withdraw(1500).yeild_interest()
 kendra.account['savings'].deposit(300).deposit(500).deposit(1500).withdraw(800).yeild_interest()
 kendra.display_user_balance()
+
 kendra.transfer_money(400, mike, "checking", "savings")
 mike.transfer_money(800, kendra, "savings", "checking")
