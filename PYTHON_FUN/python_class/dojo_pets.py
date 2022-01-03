@@ -10,6 +10,7 @@ class Pet:
 
     def sleep(self):
         self.energy += 25
+        print(f"{self.name} is sleeping...zzzzz!")
         return self
 
     def eat(self):
@@ -76,5 +77,5 @@ mike.pet.play()
 mike.pet.sleep()
 mike.pet.sleep()
 print(mike.pet.noise)
-print(mike.pet.energy)
-print(mike.pet.health)
+print(f"{mike.pet.name}'s final energy score: {mike.pet.energy}")
+print(f"{mike.pet.name}'s final health score: {mike.pet.health}")
