@@ -1,15 +1,22 @@
 class Store:
     products = []
-    def __init__(self, name, price, category):
+    def __init__(self, name, products):
         self.name = name
-        self.price = price
-        self.category = category
+        self.products = products
+        # self.price = args[0]
+        # self.category = args[1]
         Store.products.append(self)
         # self.products = products
 
+    # def __repr__(self):
+    #     for i in self.products:
+    #         print(f"<__main__.Store: products = " + str(self.products) + ">")
+
     def print_products(self):
         converted_products = list(self.products)
-        print(converted_products)
+        # print(converted_products)
+        for i in converted_products:
+            print(f"<__main__.Store: products = " + str(self.products[0]) + ">")
 
     def add_product(self, new_product):
         self.new_product = new_product
@@ -37,7 +44,7 @@ class Product:
         self.name = name
         self.price = price
         self.category = category
-        self.product = Store(self.name, self.price, self.category)
+        # self.product = Store(self.name, self.price, self.category)
 
     def update_price(self, percent_changed, is_increased):
         self.perecent_changed = percent_changed
@@ -90,6 +97,12 @@ class User:
 ###################################################################################
 broccoli = Product("Broccoli", 3.50, "Vegetable")
 print(broccoli.print_info())
+bacon = Product("Bacon", 5.50, "Meat")
+
+generalStore = Store("Mikes General Store", broccoli)
+generalStore = Store("Mikes General Store", bacon)
+print(generalStore.products.category)
+print(generalStore.products.price)
 
 # generalStore = Store("Mike's General Store", ["Cookies", "Bubble Gum", "Broccoli"])
 # print(generalStore.name)
