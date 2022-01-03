@@ -14,12 +14,16 @@ class Pet:
 
     def eat(self):
         self.energy += 5
-        self.health =+ 10
+        self.health += 10
         return self
 
     def play(self):
         self.health += 5
-        self.energy -= 15
+        self.energy -= 10
+        if self.energy < 30:
+            print(f"Time for {self.name} to rest!")
+        else:
+            print(f"Keep playing!")
         return self
 
     def noise(self):
@@ -38,6 +42,7 @@ class Ninja:
         self.pet.play()
         return self
     #     # walk() - walks the ninja's pet invoking the pet play() method
+
     def feed(self):
 
         if len(self.pet_food) > 0:
@@ -60,16 +65,16 @@ fido = Pet("fido", "dog", [ "runs", "eats everything"] , "woof!")
 
 mike = Ninja("Mike", "Magruder", my_treats, my_pet_food, fido)
 
-mike.feed();
-mike.feed();
-mike.feed();
-
-# print(mike.first_name)
-# print(mike.last_name)
-# print(mike.treats)
-# print(mike.pet_food)
-# print(mike.pet)
-# print(mike.pet.name)
-# print(mike.pet.type)
-# print(mike.pet.tricks)
-# print(mike.pet.health)
+print(f"{mike.pet.name}'s BIG adventure!")
+mike.feed()
+mike.feed()
+mike.feed()
+mike.pet.play()
+mike.pet.play()
+mike.pet.play()
+mike.pet.play()
+mike.pet.sleep()
+mike.pet.sleep()
+print(mike.pet.noise)
+print(mike.pet.energy)
+print(mike.pet.health)
